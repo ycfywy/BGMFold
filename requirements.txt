@@ -1,0 +1,13 @@
+# Install a CUDA-compatible PyTorch build for the machine separately if needed.
+# GPU experiment bundles recorded torch 2.10.0+cu128; other versions need a smoke run.
+torch>=2.6
+transformers>=4.38,<6
+numpy>=1.26
+pandas>=2.0
+pyarrow>=14
+PyYAML>=6
+matplotlib>=3.7
+tensorboard>=2.14
+safetensors>=0.4
+tqdm>=4.66
+# Optional for RNA-FM / RiNALMo attention: pip install multimolecule==0.2.0

@@ -1,0 +1,58 @@
+[
+  {
+    "dataset": "bprna-spot0",
+    "split": "train",
+    "n": 10814,
+    "min_length": 33,
+    "max_length": 498,
+    "sha256": "0fda1d09f4ce685b7e2a5497f5fd06b6a54a5aeaf287f414c089bb1dc9b5b640"
+  },
+  {
+    "dataset": "bprna-spot0",
+    "split": "validation",
+    "n": 1300,
+    "min_length": 33,
+    "max_length": 497,
+    "sha256": "00934c684a543e9a7209bd2df9bbf6caf487460e9f536c5f43bdd94fbcd2054d"
+  },
+  {
+    "dataset": "bprna-spot0",
+    "split": "test",
+    "n": 1305,
+    "min_length": 22,
+    "max_length": 499,
+    "sha256": "bfdc1b55b3a070932c3ca4d5db146a05ace9dc4e207ba7e51b2efb86d6535341"
+  },
+  {
+    "dataset": "rnastralign.600",
+    "split": "train",
+    "n": 20923,
+    "min_length": 30,
+    "max_length": 600,
+    "sha256": "3e587fb64809184cf9d3f43ffadf2d4c8c93ac40ea858a49194b10c746200538"
+  },
+  {
+    "dataset": "rnastralign.600",
+    "split": "validation",
+    "n": 2581,
+    "min_length": 36,
+    "max_length": 593,
+    "sha256": "bbdafa922ae13b4bd4fe9f30566b8ae4fcc41099bb9013161689f11f02416862"
+  },
+  {
+    "dataset": "rnastralign.600",
+    "split": "test",
+    "n": 2574,
+    "min_length": 30,
+    "max_length": 600,
+    "sha256": "75476dc01d2db6525ce4cc3896abbbccb85d015939c847583a9162a21d562b3a"
+  },
+  {
+    "dataset": "archiveii.600",
+    "split": "test",
+    "n": 3911,
+    "min_length": 28,
+    "max_length": 595,
+    "sha256": "9376e943b434e14a7e6baa7be66a5fecbc98d2f48b0b94814e0e51dc0749e944"
+  }
+]

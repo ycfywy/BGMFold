@@ -1,0 +1,25 @@
+type: discriminative_contact_map
+rna_encoder_path: configs/encoder_gbrna
+rna_encoder_freeze: false
+rna_encoder_initialize_from_config_only: true
+rna_encoder_num_attn_layers: 2
+rna_encoder_gradient_checkpointing: false
+pair_dim: 512
+fusion_mode: cross_gated
+fusion_dropout: 0.1
+use_local_smoothing: true
+local_smoothing_kernel_size: 3
+dropout: 0.0
+multitask:
+  enabled: true
+  pairedness:
+    enabled: true
+    source: pair_pool
+  pair_type:
+    enabled: true
+    num_classes: 4
+    class_names:
+    - AU
+    - GC
+    - GU
+    - other

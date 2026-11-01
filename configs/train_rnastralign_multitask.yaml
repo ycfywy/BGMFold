@@ -1,0 +1,140 @@
+trainer:
+  type: direct_contact_map
+experiment:
+  name: bgmfold_rnastralign_multitask
+  seed: 2528
+  output_dir: outputs
+  device: cuda:0
+distributed:
+  expected_world_size: 2
+  static_graph: false
+  find_unused_parameters: true
+  bucket_cap_mb: 100
+data:
+  train_datasets:
+  - name: rnastralign-train
+    path: data/rnastralign.600/train.parquet
+  val_datasets:
+  - name: rnastralign-val
+    path: data/rnastralign.600/validation.parquet
+  test_datasets:
+  - name: rnastralign-test
+    path: data/rnastralign.600/test.parquet
+  - name: archiveii-test
+    path: data/archiveii.600/test.parquet
+  covariation_augmentation:
+    enabled: true
+    select: 0.1
+    replace: 0.3
+    seed: 2528
+  num_workers: 2
+  eval_num_workers: 1
+  bucket_width: 32
+  length_power: 2.6
+  budget: 20000000
+  min_batch_size: 1
+  max_batch_size: 16
+  eval_budget: 20000000
+  eval_min_batch_size: 1
+  eval_max_batch_size: 8
+  distributed_batch_mode: same_bucket
+  batch_size_by_bucket:
+    0: 16
+    1: 16
+    2: 16
+    3: 16
+    4: 16
+    5: 16
+    6: 12
+    7: 11
+    8: 9
+    9: 7
+    10: 6
+    11: 5
+    12: 4
+    13: 4
+    14: 3
+    15: 3
+    16: 2
+    17: 2
+    18: 2
+eval:
+  threshold: 0.5
+  min_sequence_separation: 1
+  greedy_projection: true
+  greedy_logit_ranking: true
+  aggregation: per_sequence_macro
+  threshold_tie_prefer_higher: true
+model:
+  type: discriminative_contact_map
+  rna_encoder_path: ENCODER_PATH
+  rna_encoder_freeze: false
+  rna_encoder_initialize_from_config_only: false
+  rna_encoder_num_attn_layers: 2
+  rna_encoder_gradient_checkpointing: false
+  pair_dim: 512
+  fusion_mode: cross_gated
+  fusion_dropout: 0.1
+  use_local_smoothing: true
+  local_smoothing_kernel_size: 3
+  dropout: 0.0
+  multitask:
+    enabled: true
+    pairedness:
+      enabled: true
+      source: pair_pool
+    pair_type:
+      enabled: true
+      num_classes: 4
+      class_names:
+      - AU
+      - GC
+      - GU
+      - other
+loss:
+  normalization: per_sequence
+  pos_weight: 300.0
+  focal_gamma: 0.0
+  dice_weight: 0.0
+  degree_weight: 0.0
+  multitask:
+    normalization: per_sequence
+    pairedness_weight: 0.1
+    pairedness_pos_weight: 1.0
+    pairedness_focal_gamma: 0.0
+    pair_type_weight: 0.1
+optim:
+  lr: 0.0001
+  rna_encoder_lr: 1.0e-05
+  weight_decay: 0.01
+  scheduler: cosine_with_encoder_warmup
+  warmup_epochs: 1
+  rna_encoder_warmup_epochs: 1
+  min_lr_ratio: 0.1
+train:
+  num_epochs: 400
+  encoder_freeze_epochs: 3
+  amp: true
+  amp_dtype: bfloat16
+  allow_tf32: false
+  grad_clip_norm: 1.0
+  microbatch_splits: 1
+  gradient_accumulation_target_global_samples: 0
+  global_weighted_loss: true
+  eval_every_n_epochs: 20
+  test_every_n_epochs: 40
+  train_eval_every_n_epochs: 40
+  checkpoint_every_n_epochs: 20
+  log_every_n_steps: 100
+  save_last_checkpoint: true
+  save_optimizer_state: true
+  early_stopping:
+    enabled: true
+    patience_epochs: 80
+    min_delta: 0.0
+  test_best_at_end: true
+  evaluate_initial_checkpoint: false
+visualization:
+  enabled: true
+  every_n_epochs: 20
+  num_samples_per_dataset: 3

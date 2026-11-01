@@ -1,0 +1,44 @@
+[
+  {
+    "dataset": "rnastralign.600",
+    "group": "full",
+    "n": 2574,
+    "gt_pseudoknot_rnas": 364,
+    "empty_gt_rnas": 0
+  },
+  {
+    "dataset": "rnastralign.600",
+    "group": "prifold_lt490",
+    "n": 2492,
+    "gt_pseudoknot_rnas": 296,
+    "empty_gt_rnas": 0
+  },
+  {
+    "dataset": "archiveii.600",
+    "group": "full",
+    "n": 3911,
+    "gt_pseudoknot_rnas": 1039,
+    "empty_gt_rnas": 5
+  },
+  {
+    "dataset": "archiveii.600",
+    "group": "prifold_lt490",
+    "n": 3845,
+    "gt_pseudoknot_rnas": 997,
+    "empty_gt_rnas": 5
+  },
+  {
+    "dataset": "bprna-spot0",
+    "group": "full",
+    "n": 1305,
+    "gt_pseudoknot_rnas": 129,
+    "empty_gt_rnas": 1
+  },
+  {
+    "dataset": "bprna-spot0",
+    "group": "prifold_lt490",
+    "n": 1303,
+    "gt_pseudoknot_rnas": 129,
+    "empty_gt_rnas": 1
+  }
+]

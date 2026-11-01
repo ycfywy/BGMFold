@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bgmfold"
+version = "0.1.0"
+description = "RNA secondary structure prediction with bidirectional gated feature modulation"
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+attention = ["multimolecule==0.2.0"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["bgmfold*"]
+
+[tool.setuptools.package-data]
+"bgmfold.vendor.rnabert" = ["vocab.txt"]
+"bgmfold.vendor" = ["GENBIO_COMMUNITY_LICENSE.txt"]

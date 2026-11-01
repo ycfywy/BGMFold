@@ -1,0 +1,26 @@
+{
+  "loss_function_ast": {
+    "distributed_weighted_mean": "ed6bec4d03136eaae61d9761e3a8bb42e90d0799aa88ad8d30bbaa620d04508d",
+    "_sequence_normalized_mean": "b9c248205848e36374bf40bc6ef51f4b1d9735d5d0bda5e3bc37fda7fa1bd37f",
+    "_sequence_class_balanced_mean": "9b77fd9d418b9122b49a96c4d6471747b61393d4d5cf682df9f77575e0e1c853",
+    "masked_contact_loss": "371f7f1b596c71c98aefa81607f9522cc34dca4ca6b9fa7fd6f033ff6ed2cc4a",
+    "masked_pairedness_loss": "cda45f9201ae3cbbe6b77e62bf51a22e622836974b8ba2d4b06d064e74f94681",
+    "masked_pair_type_loss": "4ddc4821dce2a9777d87c5cb940edfd0dcb023f6431a684714d3264a62f63851",
+    "compute_multitask_losses": "5094e9f62bc89ab3718b707f5bff428d5f8c72f43410a5e322408145b266330d"
+  },
+  "scope": "Only function moves/namespace changes; GPU execution is not tested by AST equivalence.",
+  "model_definitions": {
+    "discriminative_contact_map_model.py": {
+      "CrossGatedPairFusion": "1eb91588797345f06f013a4c8b68e933620e11e9d5afd4d8059fc20c8ecdc43e",
+      "SimplePairFusion": "018283adb753de3df15e714701ec211956b3031585d96dbdee75a6f1093824ad",
+      "DepthwisePairSmoother": "621eea088fb0f4021691e008da7c89dbc0fa4aad00da215cfbf26a202ee0d521",
+      "DiscriminativeContactMapPredictor": "683d25eb73d6eb464654e2b2dd9651ab69f6418b3d1ee027c0785d6169c8993e",
+      "build_discriminative_contact_map_model": "bd002961fa8e80a4538016c2a4182ceaf70cecfcd5c8dfdc556a59381cf19a26"
+    },
+    "rnafm_encoder.py": {
+      "RNAEncoderFeatureExtractor": "ee6301aaad4f4ab87b293aeb81f7520c82e5f3cddb2cdd3c7bd44097fac4777c",
+      "resolve_rna_encoder_config": "637ed944e86b8b7692ce1157b8be45f1c0221aedee583b3d5dda00e954674d45"
+    }
+  },
+  "ast_version_normalization": "Ignore empty Python 3.12 type_params fields; include all executable model/loss AST."
+}

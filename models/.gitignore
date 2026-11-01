@@ -1,0 +1,14 @@
+# Keep the weight-directory skeleton, not large downloaded/trained weights.
+pretrained/*
+!pretrained/README.md
+!pretrained/gbrna/
+!pretrained/rnafm/
+!pretrained/rinalmo/
+pretrained/gbrna/*
+pretrained/rnafm/*
+pretrained/rinalmo/*
+!pretrained/gbrna/.gitkeep
+!pretrained/rnafm/.gitkeep
+!pretrained/rinalmo/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
