@@ -8,6 +8,8 @@ This repository contains the source code for BGMFold. It includes the core model
 
 Upstream encoders: [GB.RNA-1.6B](https://huggingface.co/genbio-ai/GB.RNA-1.6B), [RNA-FM](https://huggingface.co/multimolecule/rnafm), and [RiNALMo-Giga](https://huggingface.co/multimolecule/rinalmo-giga). Their local folders and `hf download` commands are listed in [models/pretrained/README.md](models/pretrained/README.md).
 
+Trained BGMFold task checkpoints are available at [USTC Pan (bpRNA)](https://pan.ustc.edu.cn/share/index/078f2892a4e14cb2b391) and [USTC Pan (RNAStrAlign)](https://pan.ustc.edu.cn/share/index/cc1b94e1ab04400c8090); they will migrate to Hugging Face later. See [models/README.md](models/README.md) for the local layout and download instructions.
+
 ## Installation
 
 Use Python 3.10+ and a CUDA-enabled PyTorch installation appropriate for your GPU/driver. The recorded GPU experiment environment used PyTorch `2.10.0+cu128`; dependency bounds are not a claim that every version combination has been tested.

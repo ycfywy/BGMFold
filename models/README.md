@@ -32,6 +32,17 @@ See [pretrained/README.md](pretrained/README.md) for the three download commands
 
 `checkpoints/` holds complete task checkpoints collected from your own runs. Independent evaluation loads these checkpoints; it does not require a second copy of the original encoder weights.
 
+### Download trained checkpoints
+
+Trained task checkpoints are distributed as two archives, currently hosted on USTC Pan; they will migrate to Hugging Face later.
+
+| Task | Checkpoints | Download |
+|---|---|---|
+| bpRNA C/P/T/M | `checkpoints/bprna/{contact,pairedness,pairtype,multitask}/best.pt` | [USTC Pan](https://pan.ustc.edu.cn/share/index/078f2892a4e14cb2b391) |
+| RNAStrAlign multitask | `checkpoints/rnastralign/multitask/best.pt` | [USTC Pan](https://pan.ustc.edu.cn/share/index/cc1b94e1ab04400c8090) |
+
+Extract each archive into `models/checkpoints/` so the `best.pt` files land under the paths shown in the layout above.
+
 The **training scripts save to the chosen output directory**, not automatically to `models/`:
 
 | Training run | Validation-best task checkpoints |
