@@ -1,7 +1,5 @@
 # Model weights
 
-**Trained BGMFold models will be released on Hugging Face.** The repository link and download commands will be added here when the release becomes available. No Hugging Face checkpoint release is available through this README yet.
-
 ## Directory layout
 
 ```text
@@ -32,7 +30,7 @@ models/
 
 See [pretrained/README.md](pretrained/README.md) for the three download commands and attention-analysis examples.
 
-`checkpoints/` holds complete task checkpoints downloaded from the planned Hugging Face release or collected from your own runs. Independent evaluation loads these checkpoints; it does not require a second copy of the original encoder weights.
+`checkpoints/` holds complete task checkpoints collected from your own runs. Independent evaluation loads these checkpoints; it does not require a second copy of the original encoder weights.
 
 The **training scripts save to the chosen output directory**, not automatically to `models/`:
 

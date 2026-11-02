@@ -73,5 +73,5 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/analyze_attention.sh \
 
 RNA-FM/RiNALMo attention uses the optional dependencies: `pip install -e '.[attention]'`.
 
-These are upstream pretrained encoders. Trained **BGMFold task checkpoints** will be released separately on Hugging Face and belong under `models/checkpoints/`; see [the model overview](../README.md).
+These are upstream pretrained encoders. Trained **BGMFold task checkpoints** belong under `models/checkpoints/`; see [the model overview](../README.md).
 

@@ -4,9 +4,7 @@ RNA secondary-structure prediction using pretrained RNA representations, bidirec
 
 [Evaluation protocol](docs/evaluation.md) · [Training recipes](docs/training.md) · [Data](data/README.md)
 
-This repository contains the source code for BGMFold. It includes the core model, **two training entry points**, **two checkpoint-evaluation entry points**, and **one attention-analysis entry point**. Model weights are supplied separately. The included seven Parquet splits are the exact benchmark files used in the current experiments.
-
-**Trained BGMFold models will be released on Hugging Face.** The repository URL and download instructions will be added once the release is available. See [models/README.md](models/README.md) for the local weight layout and the distinction between pretrained encoders and trained task checkpoints.
+This repository contains the source code for BGMFold. It includes the core model, **two training entry points**, **two checkpoint-evaluation entry points**, and **one attention-analysis entry point**. Model weights are supplied separately. The included seven Parquet splits are the exact benchmark files used in the current experiments. See [models/README.md](models/README.md) for the local weight layout and the distinction between pretrained encoders and trained task checkpoints.
 
 Upstream encoders: [GB.RNA-1.6B](https://huggingface.co/genbio-ai/GB.RNA-1.6B), [RNA-FM](https://huggingface.co/multimolecule/rnafm), and [RiNALMo-Giga](https://huggingface.co/multimolecule/rinalmo-giga). Their local folders and `hf download` commands are listed in [models/pretrained/README.md](models/pretrained/README.md).
 
